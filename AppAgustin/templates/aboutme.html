@@ -7,7 +7,29 @@
 {% block main %}
 
 
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ piloto.nombre }}</h5>
+      <p class="card-text">Algunos datos del piloto</p>
+      <a href="#" class="btn btn-primary">Ver más</a>
+    </div>
+  </div>
 
+
+
+
+
+  {% if piloto %}
+  <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ piloto.nombre }}</h5>
+      <p class="card-text">Algunos datos del piloto</p>
+      <a href="#" class="btn btn-primary">Ver más</a>
+    </div>
+  </div>
+{% endif %}
 
 
 {% endblock main %}

@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from AppAgustin.models import Inicio, Noticias, Fechas, Pilotos, Aboutme
 
@@ -20,3 +21,14 @@ def aboutme(request):
 
 
 #FORMULARIO PARA LA BUSQUEDA DE PILOTOS
+
+def pilotos(request):
+  pilotos = Pilotos.objects.all()
+
+  if request.method == "POST":
+    nombre = request.POST["nombre"]
+    pilotos = pilotos.filter(nombre__icontains=nombre)
+
+  return render(request, "pilotos.html", {
+    "pilotos": pilotos,
+  })

@@ -7,7 +7,104 @@
 {% block main %}
 
 
-<!--AGREGAR CONTENIDO ACÁ -->
+<div class="container text-center">
+    <div class="row align-items-start">
+      <div class="col">
+        <u><h3>En la siguiente seccion podrás vizualizar las fechas que ya se corrieron y las que vienen</h3></u>
+        <!--tabla de fechas GP-->
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">N°</th>
+                <th scope="col">Circuito</th>
+                <th scope="col">Fecha</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>GP de los Países Bajos</td>
+                <td>27 de agosto de 2023 - REALIZADO</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>GP de Italia</td>
+                <td>3 de septiembre de 2023 - REALIZADO</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>GP de Singapur</td>
+                <td>17 de septiembre de 2023 - REALIZADO</td>
+              </tr>
+              <th scope="row">4</th>
+              <td>GP de Japón</td>
+              <td>24 de septiembre de 2023 - REALIZADO</td>
+              <tr>
+              <th scope="row">5</th>
+              <td>GP de Qatar</td>
+              <td>8 de octubre de 2023 - REALIZADO</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>GP de Estados Unidos</td>
+                <td>22 de octubre de 2023 - PRÓXIMO</td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>GP de México</td>
+                <td>29 de octubre de 2023</td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td>GP de Brasil</td>
+                <td>5 de noviembre de 2023</td>
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <td>GP de Las Vegas</td>
+                <td>18 de noviembre de 2023</td>
+              </tr>
+              <tr>
+                <th scope="row">10</th>
+                <td>GP de Abu Dhabi</td>
+                <td>26 de noviembre de 2023</td>
+              </tr>
+            </tbody>
+          </table>
+        <img src="{% static 'assets/monaco.jpg'%}" alt="">
+      </div>
+      <div class="col">
+        <u><p>También podés adquirir tus entradas!</p></u>
+        <!--COMPRA DE ENTRADAS-->
+        <h6><u>Venta de entradas</u></h6>
+        <select name="" id="">
+            <option value="">Evento</option>
+            <option value="">GP Estados Unidos</option>
+            <option value="">GP Mexico</option>
+            <option value="">GP Brasil</option>
+            <option value="">GP Las Vegas</option>
+            <option value="">GP Abu Dhabi</option>
+        </select>
+        <p><u>Ubicaion de la Entrada</u></p>
+        <select name="" id="">
+            <option value="">vip</option>
+            <option value="">palcos</option>
+            <option value="">tribunas</option>
+            <option value="">Resto del estadio</option>
+        </select>
+        <p><u>Metodo de pago</u></p>
+        <select name="" id="">
+            <option value="">Mercado pago</option>
+            <option value="">Tarjeta de debito</option>
+            <option value="">Tarjeta de credito</option>
+        </select>
+        <input class="botondecompra" type="submit"  value="Comprar">
+        
+      </div>
+    </div>
+  </div>
+  <br><br><br><br>
+
 
 
 {% endblock main %}
