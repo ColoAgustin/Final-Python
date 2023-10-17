@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+
+
+<!--login/logout y registro de usuarios-->
+    
+<h2>{{ mesnaje }}</h2>
+<form action="" method="POST">
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+    <button type="submit">Iniciar Sesión</button>
+</form>
+
+
+
+
+
+
+<script src="js/scripts.js"></script>
+
+
+
+{% endblock main %}

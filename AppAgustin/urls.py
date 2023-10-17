@@ -19,6 +19,7 @@ Including another URLconf
 
 from django.urls import path
 from AppAgustin import views
+from django.contrib.auth.views import LogoutView
 
 
 #MIS URLS
@@ -29,4 +30,7 @@ urlpatterns = [
     path('fechas/', views.fechas, name="Fechas"),
     path('pilotos/', views.pilotos, name="Pilotos"),
     path('aboutme/', views.aboutme, name="Aboutme"),
+    path('login/', views.login_request, name="Login"),
+    path('register/', views.register, name="Register"),
+    path('logout/', LogoutView.as_view(template_name='logout.html'), name='Logout'),
 ]
