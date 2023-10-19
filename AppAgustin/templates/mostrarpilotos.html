@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+
+
+{% for piloto in pilotos %}
+    <li>{{ pilotos }}</li><a href="{% url 'Delete' pilotos.id %}">Borrar</a>
+{% endfor %}
+
+
+{% endblock main %}

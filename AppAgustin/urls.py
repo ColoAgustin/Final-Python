@@ -20,6 +20,10 @@ Including another URLconf
 from django.urls import path
 from AppAgustin import views
 from django.contrib.auth.views import LogoutView
+from django.contrib.auth.decorators import login_required
+
+
+#from django.conf.urls import handler404
 
 
 #MIS URLS
@@ -33,4 +37,11 @@ urlpatterns = [
     path('login/', views.login_request, name="Login"),
     path('register/', views.register, name="Register"),
     path('logout/', LogoutView.as_view(template_name='logout.html'), name='Logout'),
+    path('form/', views.form, name="Form"),
+    path('busqueda/', views.busqueda, name="Busqueda"),
+    path('mostrar/', views.mostrar_pilotos, name="Mostrar"),
 ]
+
+
+
+#handler404 = views.Error404View.as_view()

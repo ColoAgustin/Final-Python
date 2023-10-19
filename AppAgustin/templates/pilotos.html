@@ -11,250 +11,28 @@
 <h1 class="">Pilotos de Fórmula 1</h1>
 
 
+<div>
+
 <!--CARDS DE LOS PILOTOS DE F1-->
-<div class="row">
+    <div class="row">
+    {% for registro in registros %}
 
+        <div class="card col-12 col-md-6 col-lg-4 image-center" style="width: 18rem;">
+            <img src="{{ registro.imagen }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ registro.nombre }} - {{ registro.apellido }}</h5>
+                <img src="{% static 'assets/p2.jpg'%}" alt="">
+                <p class="card-text">Red Bull Racing.</p>
+                <a href="#" class="btn btn-primary">Ver mas</a>
+            </div>
+            </div>
+            {% empty %}
+            <li>No se encontraron pilotos.</li>
+        {% endfor %}
 
-    <div class="card col-12 col-md-6 col-lg-4 image-center" style="width: 18rem;">
-        <img src="{% static 'assets/1.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Max Verstappen</h5>
-        <img src="{% static 'assets/p1.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-    <div class="card col-12 col-md-6 col-lg-4 image-center" style="width: 18rem;">
-    <img src="{% static 'assets/2.jpg'%}" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Sergio perez</h5>
-        <img src="{% static 'assets/p2.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    </div>
-
-    <div class="card col-12 col-md-6 col-lg-4 image-center" style="width: 18rem;">
-        <img src="{% static 'assets/3.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Lewis Hamilton</h5>
-        <img src="{% static 'assets/p3.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-    <div class="card col-12 col-md-6 col-lg-4 " style="width: 18rem;">
-        <img src="{% static 'assets/4.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Fernando Alonso</h5>
-        <img src="{% static 'assets/p4.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-    <div class="card col-12 col-md-6 col-lg-4" style="width: 18rem;">
-        <img src="{% static 'assets/5.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Carlos Sainz	</h5>
-        <img src="{% static 'assets/p5.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-    <div class="card col-12 col-md-6 col-lg-4" style="width: 18rem;">
-        <img src="{% static 'assets/6.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Charles Leclerc</h5>
-        <img src="{% static 'assets/p6.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-        <img src="{% static 'assets/7.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">George Russell</h5>
-        <img src="{% static 'assets/p7.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-
-    <div class="card" style="width: 18rem;">
-        <img src="{% static 'assets/8.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Lando Norris</h5>
-        <img src="{% static 'assets/p8.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-
-
-    <div class="card" style="width: 18rem;">
-        <img src="{% static 'assets/9.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Oscar Piastri</h5>
-        <img src="{% static 'assets/p9.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-
-
-    <div class="card" style="width: 18rem;">
-        <img src="{% static 'assets/10.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Lance Stroll</h5>
-        <img src="{% static 'assets/p10.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-
-
-    <div class="card" style="width: 18rem;">
-        <img src="{% static 'assets/11.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Pierre Gasly</h5>
-        <img src="{% static 'assets/p11.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-
-
-    <div class="card" style="width: 18rem;">
-        <img src="{% static 'assets/12.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Esteban Ocon</h5>
-        <img src="{% static 'assets/p12.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-
-
-    <div class="card" style="width: 18rem;">
-        <img src="{% static 'assets/13.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Alexander Albon</h5>
-        <img src="{% static 'assets/p1.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-
-    <div class="card" style="width: 18rem;">
-        <img src="{% static 'assets/14.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Nico Hulkenberg</h5>
-        <img src="{% static 'assets/p14.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-
-    <div class="card" style="width: 18rem;">
-        <img src="{% static 'assets/15.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Valtteri Bottas</h5>
-        <img src="{% static 'assets/p15.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-
-    <div class="card" style="width: 18rem;">
-        <img src="{% static 'assets/16.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Ghanyu Zhou</h5>
-        <img src="{% static 'assets/p16.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-
-    <div class="card" style="width: 18rem;">
-        <img src="{% static 'assets/17.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Yuki Tsunoda</h5>
-        <img src="{% static 'assets/p17.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-
-    <div class="card" style="width: 18rem;">
-        <img src="{% static 'assets/18.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Kevin Magnussen</h5>
-        <img src="{% static 'assets/p18.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-
-    <div class="card" style="width: 18rem;">
-        <img src="{% static 'assets/19.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Liam Lawson</h5>
-        <img src="{% static 'assets/p19.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-
-
-
-    <div class="card" style="width: 18rem;">
-        <img src="{% static 'assets/20.jpg'%}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Logan Sargeant</h5>
-        <img src="{% static 'assets/p1.jpg'%}" alt="">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
     </div>
 
 </div>
-
-
-
-  
-  
-
-
-
-
-
-
-  
-  
-    
-  <!--bucle para recorrer lista de pilotos-->
-
-
-  <!--Busqueda de pilotos-->
-  <input type="text" name="busqueda" placeholder="Buscar piloto">
-
 
 
 
