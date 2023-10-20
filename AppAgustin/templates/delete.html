@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+
+<!---contenido-->
+
+
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.confirm_delete }}
+    <input type="submit" value="Eliminar">
+  </form>
+  
+
+
+
+
+
+
+
+
+
+
+{% endblock main %}

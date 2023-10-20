@@ -11,6 +11,7 @@ class PilotosFormulario(forms.Form):
     nombre  = forms.CharField()
     apellido = forms.CharField()
     imagen = forms.CharField()
+    imagen_bandera = forms.CharField()
     
 #BUSQUEDA
 class BuscaPilotosForm(forms.Form):
@@ -31,6 +32,15 @@ class UserRegisterForm(UserCreationForm):
         # Sacar los mensajes de ayuda
         help_texts = {k:"" for k in fields}
         
+        
+        
+        
+#METODO DELETE
+
+
+
+
+
         
         
         

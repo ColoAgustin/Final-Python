@@ -1,5 +1,5 @@
 from django.http import HttpResponse, HttpResponseServerError
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from AppAgustin.models import  Inicio, Noticias, Fechas, Pilotos, Aboutme
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import login, logout, authenticate
@@ -13,6 +13,9 @@ from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from typing import List
+
+
+
 
 
 
@@ -50,7 +53,7 @@ def form(request):
         if miFormulario.is_valid():
             informacion = miFormulario.cleaned_data
            
-            pilotos = Pilotos(nombre=informacion["nombre"], apellido=informacion["apellido"], imagen=informacion["imagen"])
+            pilotos = Pilotos(nombre=informacion["nombre"], apellido=informacion["apellido"], imagen=informacion["imagen"], imagen_bandera=informacion["imagen_bandera"])
             
             pilotos.save()
             
@@ -83,7 +86,7 @@ def busqueda(request):
 
 def mostrar_pilotos(request):
 
-    pilotos = Pilotos.objects.all() #trae todos los profesores
+    pilotos = Pilotos.objects.all() #trae todos los pilotos
 
     contexto= {"pilotos":pilotos} 
 
@@ -156,36 +159,6 @@ def register(request):
       return render(request,"registro.html" ,  {"form":form})
     
     
-#mixin para restringir una web del proyecto
-
-
-
-#TEST DE BUSQUEDA NUMERO 2------------------------------------------------------------------------------------------
-
-# def pilotos(request):
-#     # Obtener la lista de pilotos de la base de datos
-#     pilotos = Pilotos.objects.all()
-
-#     # Obtener el nombre del piloto que el usuario desea buscar
-#     piloto_buscado = request.GET.get("piloto")
-
-#     # Iterar sobre la lista de pilotos
-#     for piloto in pilotos:
-#         # Si el nombre del piloto coincide con el que el usuario desea buscar
-#         if piloto.nombre == piloto_buscado:
-#             # Devolver el piloto encontrado
-#             return render(request, "pilotos.html", {"piloto": piloto})
-
-#     # Si el piloto no se encuentra, devolver un mensaje de error
-#     return render(request, "pilotos.html", {"error": "El piloto no se encuentra"})
-#
-
-
-
-
-
-
-
 
 #CLASES PARA LOS ERRORES DE URL DEL USUARIO
 
@@ -206,5 +179,16 @@ class VistaEjemplo(TemplateView):
 class Error404View(TemplateView):
     template_name = "error.html"
   
+#METODO DELETE PARA EL FORMULARIO AFTER TEST 
+# def eliminar(request, piloto_nombre):
 
+#       pilotos = Pilotos.objects.get(nombre=pilotos)
+#       pilotos.delete()
+      
+#       #vuelvo al menú
+#       pilotos = Pilotos.objects.all() #trae todos los pilotos
 
+#       contexto= {"pilotos":pilotos} 
+
+#       return render(request, "pilotos.html",contexto)
+    
