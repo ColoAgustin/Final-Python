@@ -10831,12 +10831,76 @@ textarea.form-control-lg {
 }
 
 .holacolo{
-  background-color: #c5e8ef;
+  background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  
 }
 
 .coop{
-  background-color: #cff4fc;
+  background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 }
 .bgnoticias{
   background-color: #bfd1ec;
 }
+
+.backgroundfechas{background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)};
+
+.backdefechas{
+  margin-top: 50px;
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/*red*/
+.divgeneralcolo{
+  margin-left: 500px;
+  margin-right: 500px;
+  margin-top: 50px;
+  width: 960;
+  height: 800px;
+}
+/*green*/
+.divsobremi1{
+  float: right;
+  width: 300px;
+  height: 500px;
+}
+/*blue*/
+.divsobremi2{
+  width: 640px;
+  height: 200px;
+}
+/*purple*/
+.divsobremi3{
+  margin-top: 20px;
+  width: 640px;
+  height: 580px;
+}
+
+.backsobremi{
+  margin: 0;
+  padding: 0;   
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+}
+
+.imgaboutme{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+
+
+.pblack1{
+  color: black;
+}
+
+
+

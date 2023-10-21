@@ -6,30 +6,80 @@
 
 {% block main %}
 
-
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{ piloto.nombre }}</h5>
-      <p class="card-text">Algunos datos del piloto</p>
-      <a href="#" class="btn btn-primary">Ver más</a>
+<body class="backgroundfechas">
+  <div class="divgeneralcolo">
+    <div class="divsobremi1">
+      <img class="imgaboutme" src="{% static 'assets/aboutme1.jpg' %}" alt="">
+      <ul>
+        <li>
+          Actualemte soy técnico en telecominicaciones, con desarrollos como la fusión de fibra óptica y demás tecnologias.
+        </li>
+        <li>
+          Tambien me formé academicamente con el nivel B2 en lengua extranjera "Inglés".
+        </li>
+        <li>
+          Pueden seguirme en mis redes sociales para mantenernos en contacto :) .
+        </li>
+      </ul>
     </div>
+    <div class="divsobremi2">
+      <h2>Soy Agustin Brunello</h2>
+      <h5>Bienvenidos a mi primer pagina con Django!</h5>
+      <p>Les comentaré sobre mi primer pagina con Django y también compartiré infomación sobre mi para conocerme mejor.
+      </p>
+    </div>
+
+    <div class="divsobremi3">
+      <ul>
+        <li>
+          Mi formación:
+          Comencé en el año 2023 en el mundo la de programación, siempre me interesó pero nunca me animé, hasta que
+          descubrí la comunidad educativa mas grande de latinoamerica,"Coder House"
+        </li>
+        <li>
+          A día de hoy hice el curso de Desarrollo Web el cual me mostró las herrmaientas básicas que se necesitan para
+          entrar al mundo de la programación, luego continué con un lenguaje que me apasciona por su versatilidad y
+          posibilidad de trabajar en multiple ambitos llamado "Python", luego de un largo camino junto a mis conpañeros
+          conseguimos aprender los conceptos fundamentales de dicho lenguaje y poder seguir creciendo profesionalmente.
+        </li>
+        <li>
+          Sobre mi: desde chico soy amante de los videojuegos, multiples deportes y sobre todo la programación. De el
+          ultimo mencionado me apaciona la capacidad que tiene un programador de poder hacer una cantidad de trabajos
+          inimaginables, desde manejar una base de datos hasta crear paginas y aplicaciones muy llamativas para los
+          usuarios que consumen dicho contenido.
+        </li>
+        <li>
+          Sobre esta pagina: al terminar mi curso de Python, donde apredimos a ultilizar el framework llamada Django, mi
+          fanatismo por la Formula 1 me ayudó a eligir un concepto para dicha web, que que pude manipular mi propia base
+          de datos y poner en practica mas conocimientos adquiridos.
+        </li>
+        <li>
+          Sobre mi futuro: planeo seguir aprendiendo sobre este hermoso mundo que se mantiene en constante crecimiento y
+          brinda muchas herramientas para que podamos brindar el mejor servicio a los usuarios.
+        </li>
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
   </div>
 
 
 
 
 
-  {% if piloto %}
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{ piloto.nombre }}</h5>
-      <p class="card-text">Algunos datos del piloto</p>
-      <a href="#" class="btn btn-primary">Ver más</a>
-    </div>
-  </div>
-{% endif %}
 
+
+
+
+
+</body>
 
 {% endblock main %}

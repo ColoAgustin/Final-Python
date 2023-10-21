@@ -7,7 +7,7 @@
 {% block main %}
 
 
-<body class="bg-pilotos">
+<body class="backgroundfechas">
     
     
     <u class="text-center"><h1>Pilotos de Fórmula 1</h1></u>
@@ -23,7 +23,7 @@
                 <img src="{{ registro.imagen }}" class="card-img-top coop" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{ registro.nombre }} - {{ registro.apellido }}</h5>
-                    <img src="{{ registro.imagen_bandera }}" alt="...">
+                    <img class="border-dark" src="{{ registro.imagen_bandera }}" alt="...">
                 </div>
                 </div>
                 {% empty %}
