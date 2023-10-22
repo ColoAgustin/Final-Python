@@ -10826,6 +10826,9 @@ textarea.form-control-lg {
 }
 
 
+
+/*--------MI CODIGO ADICIONAL-----------*/
+
 .bg-pilotos{
   background-color: #c5d7f2;
 }
@@ -10839,9 +10842,6 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100
 .coop{
   background: rgb(34,193,195);
 background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-}
-.bgnoticias{
-  background-color: #bfd1ec;
 }
 
 .backgroundfechas{background: rgb(238,174,202);
@@ -10903,4 +10903,44 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
 }
 
 
+
+.izquierda{
+  height: 100vh;
+  width: 25%;
+  text-align: center;
+}
+.derecha{
+  height: 10%;
+  width: 100vh;
+  
+}
+.imgderecha{
+  height: 100vh;
+  width: 148%;
+}
+.bbusqueda{
+  border: 1px solid;
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: #d63384;
+}
+
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #6a11cb;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+  }
+
+
+.claselogin{
+  height: 100vh;
+}
 

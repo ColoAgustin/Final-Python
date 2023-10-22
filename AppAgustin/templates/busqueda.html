@@ -5,13 +5,28 @@
 {% block title %} Inicio {% endblock title %}
 
 {% block main %}
-    
-    <form action="" method="POST">
-        {% csrf_token %}
-        <table>
-            {{ miFormulario.as_table }}
-        </table>
-        <input type="submit" value="Enviar">
 
-    </form>
+<body>
+
+    <section class="d-flex">
+        <div class="izquierda ml-1">
+            <h1>Encuentra a tu piloto favorito!</h1>
+            <br><br><br><br>
+            <h5>Recuerda que para la busqueda debés poner el nombre y apellido del piloto con sus respectivas mayúsculas.</h5>
+            <br><br>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <table>
+                    {{ miFormulario.as_table }}
+                </table>
+                <br>
+                <input class="bbusqueda" type="submit" value="Enviar">
+        </div>
+        <div class="derecha">
+            <img class="imgderecha border-black" src="{% static 'assets/todos.jpg' %}" alt="">
+        </div>
+    </section>
+
+</body>
+
 {% endblock main %}

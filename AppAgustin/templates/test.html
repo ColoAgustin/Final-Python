@@ -1,63 +1,72 @@
-<div class="container mt-5 mb-5">
-    <div class="row">
-        <div class="col bgclass" style="border:1px solid black;">
-            <div class="w-100">
-                <div class="d-block w-100" style="background-color:  black !important ;">
-                    <img class="float-end  d-block" src="{% static 'assets/pythonfinal2222.jpg' %}" alt="">
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+
+<!--login/logout y registro de usuarios-->
+<body class="claselogin">
+<!--template-->
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+    
+                <div class="mb-md-5 mt-md-4 pb-5">
+    
+                    <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                    <p class="text-white-50 mb-5">Ingresa tus datos para iniciar!</p>
+                    <br><br><br>
+                        {% csrf_token %}
+
+                        {{form.as_p}}
+                    <div class="form-outline form-white mb-4">
+                    
+                    
+                    </div>
+
+                    <div class="form-outline form-white mb-4">
+                    
+                    
+                    </div>
+                    <br><br><br>
+                    
+    
+                    <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+    
+    
                 </div>
-                <br>
+    
+                <div>
+                    <p class="mb-0">No tenés cuenta? <a href="{% url 'Register' %}" class="text-white-50 fw-bold">Registrate</a>
+                    </p>
+                </div>
+    
+                </div>
+            </div>
             </div>
         </div>
-        <div class="col bgclass2" style="border:1px solid black;">
-
-            <!--div 2-->
-            <h3>Bienvenidos a la comunidad mas grande de faniticos de la formula 1, donde podras encontrar la
-                informacion de tus pilotos favoritos, comprar entradas y enterarte lo ultimo de en mundo de la
-                maxima categoria del automovilismo!</h3>
         </div>
-        <div class="col-xl-3 col-sm-5 asidebg asideh">
-            <aside class="mt-3 d-block">
-                <div>
-                    <h6><u>Seguinos en nuestras redes:</u></h6>
-                    <div class="text-center mt-3">
-                        <a href="https://www.instagram.com/agus.brunello/" target="_blank"><img width="30"
-                                src="image/icons8-instagram-48.png" alt="ig"></a>
-                        <a href="https://www.youtube.com/@ESLCS" target="_blank"><img width="30"
-                                src="image/icons8-youtube-48.png" alt="yt"></a>
-                        <a href="https://www.twitch.tv/colooof8" target="_blank"><img width="30"
-                                src="image/icons8-twitch-48.png" alt="tw"></a>
-                        <a href="https://twitter.com/ESL" target="_blank"><img width="30"
-                                src="image/icons8-twitter-48.png" alt="twitter"></a>
-                    </div>
-                </div>
-                <div class="mt-3">
-                    <h6><u>Jugos de la plataforma</u></h6>
-                    <ul>
-                        <li class="black"><img width="20" src="image/icons8-counter-strike-48.png" alt="">
-                            Counter-Strike Global Offensive</li>
-                        <li class="black"><img width="20" src="image/icons8-valorant-48.png" alt=""> Valorant
-                        </li>
-                        <li class="black"><img width="20" src="image/icons8-liga-de-leyendas-48.png" alt="">
-                            League of Legends</li>
-                    </ul>
-                </div>
+    </section>
 
-                <div class="">
-                    <h6><u>Ayuda & Soporte</u></h6>
-                    <ul>
-                        <li><a class="black" href="contacto.html">Soporte</a></li>
-                        <li><a class="black" href="contacto.html">Unirse al Staff e-Sport Latam!</a></li>
-                    </ul>
+</body>
 
-                </div>
-                <div class="">
-                    <h6><u>Productos e-Sports Latam</u></h6>
-                    <ul>
-                        <li><a class="black" href="tienda.html">Venta de entradas</a></li>
-                        <li><a class="black" href="tienda.html">Ropa</a></li>
-                    </ul>
-                </div>
-            </aside>
-        </div>
-    </div>
+
+
+<script src="js/scripts.js"></script>
+{% endblock main %}
+
+<div>
+    <h2>{{ mesnaje }}</h2>
+    <form action="" method="POST">
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+    <button  type="submit">Iniciar Sesión</button>
+    </form>
 </div>
