@@ -1,0 +1,8 @@
+Buenos dias, tardes, noches dependiendo el horario  en que vean este trabajo. Queria comentarles que el proyecto va a estar con su respectivo video, pero por si algo falla dejo un sencillos pasos para poder conocer el funcionamiento de esta web, que no tiene mas que el codigo que aprendimos a lo largo de las clases del  curso.
+- funcionalidades principales; la vista "fechas", obliga al usuario a tener que hacer un log/registro ya que tiene un metodo de compra para ese sector de web y por seguridad se obligaria al usuario a estar registrado.
+-luego se encuentra de manera individual las vistas de "login", "logout", "registro", y en caso de ya estar registra "inicio de sesion", la ultima nos conduce a la vista del "login".
+otra funcionalidad de la web en la vista "busqueda", que debemos tipearla desde la url, ejemplo "localhost/AppAgustin/busqueda", lo que nos permite esta web es hacer una busqueda de los pilotos de formula 1 con nombre y apellido, para obtener un resultado correcto se deben escribir las mayúsculas respectivamente.
+luego como ultima funcionalidad se encuentra la vista "form" que desde alli se pueden cargar datos a la vista "pilotos", la ultima mencionada cargada desde la base de datos manualmente.
+
+
+cualquier error ante las correspondientes pruebas, no duden en contactarme,  el diseño no es super estettico ya que no queria abusar de templates y manejar mas mi codigo propio, muchas gracias por todo, nos mantenemos en contacto! Saludos Agustin Brunello

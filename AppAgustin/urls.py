@@ -39,7 +39,6 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(template_name='logout.html'), name='Logout'),
     path('form/', views.form, name="Form"),
     path('busqueda/', views.busqueda, name="Busqueda"),
-    path('mostrar/', views.mostrar_pilotos, name="Mostrar"),
 ]
 
 
